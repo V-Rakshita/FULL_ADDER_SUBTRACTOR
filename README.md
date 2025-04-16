@@ -1,20 +1,21 @@
-# FULL_ADDER_SUBTRACTOR
+### Name: V. Rakshita
+### Reg no: 212224100049
 
-Implementation-of-Full-Adder-and-Full-subtractor-circuit
+# EXP 4 - FULL ADDER AND FULL SUBTRACTOR
 
-**AIM:**
+## **AIM:**
 
 To design a Full Adder and Full Subtractor circuit and verify its truth table in Quartus using Verilog programming.
 
-**Equipments Required:**
+## **Equipments Required:**
 
 Hardware – PCs, Cyclone II , USB flasher
 
 Software – Quartus prime
 
-**Full Adder and Full Subtractor**
+## **Full Adder and Full Subtractor**
 
-**Full Adder**
+### **Full Adder**
 
 Full adder is a digital circuit used to calculate the sum of three binary bits. It consists of three inputs and two outputs. Two of the input variables, denoted by A and B, represent the two significant bits to be added. The third input, Cin, represents the carry from the previous lower significant position. Two outputs are necessary because the arithmetic sum of three binary digits ranges in value from 0 to 3, and binary 2 or 3 needs two digits. The two outputs are sum and carry.
 
@@ -26,7 +27,7 @@ Carry = AB + ACin + BCin
 
 **Figure -1 FULL ADDER**
 
-**Full Subtractor**
+### **Full Subtractor**
 
 A full subtractor is a combinational circuit that performs subtraction involving three bits, namely minuend, subtrahend, and borrow-in . It accepts three inputs: minuend, subtrahend and a borrow bit and it produces two outputs: difference and borrow.
 
@@ -36,22 +37,39 @@ Diff = A ⊕ B ⊕ Bin
 
 Borrow out = A'Bin + A'B + BBin
 
-**Truthtable**
+## **Procedure**
 
-**Procedure**
+1. Open Quartus and create a new project. Go to File -> New -> Verilog HDL File and type the program.
 
-Write the detailed procedure here
+2. Compile and run the program.
 
-**Program:**
+3. Then go to Tools -> NetList Viewers -> RTL Viewer and generate the RTL schematic and save the logic diagram.
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+4. Then go to File -> New -> University program VWF. Create nodes for inputs and outputs to generate the timing diagram.
 
-**RTL Schematic**
+5. Give different input combinations and go to Run Functional Simulation to generate the timing diagram.
 
-**Output Timing Waveform**
+## **Program:**
 
-**Result:**
+```
+module FULLADDERSUBTRACTOR(a,b,bin,cin,sum,cout,diff,bout);
+input a,b,bin,cin;
+output sum,cout,diff,bout;
+assign sum = a ^ b ^ cin;
+assign cout = ((a^b) & cin) | (a&b);
+assign diff = a ^ b ^ bin;
+assign bout = (~(a^b) & bin)| (~a & b);
+endmodule
+```
+
+## **Truth Table and Logic Diagram:**
+
+
+
+## **Waveform:**
+
+
+## **Result:**
 
 Thus the Full Adder and Full Subtractor circuits are designed and the truth tables is verified using Quartus software.
 
