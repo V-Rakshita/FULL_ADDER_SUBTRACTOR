@@ -64,10 +64,13 @@ endmodule
 
 ## **Truth Table and Logic Diagram:**
 
+![Screenshot (261)](https://github.com/user-attachments/assets/57447aaf-57e8-426b-ab5d-37b8aaa58fe6)
 
+![Screenshot (239)](https://github.com/user-attachments/assets/8dbc4f64-c5cf-4c02-83ac-daa1cadf04bc)
 
 ## **Waveform:**
 
+![Screenshot (240)](https://github.com/user-attachments/assets/9cf6c943-8dae-423c-93bf-37727c8c7ed7)
 
 ## **Result:**
 
